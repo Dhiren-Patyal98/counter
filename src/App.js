@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import { useState } from 'react'
+import './App.css'
+import Header from './Header'
+import CouterApp from './CouterApp'
+import image from '../src/Images/vintage-textured-paper-background-vector.jpg'
+export default function Counterapp() {
+  const myStyle = {
+    
+      backgroundImage:`url(${image})`,
+      minHeight:"100vh",
+      minWidth:"100vw",
+      backgroundSize:"cover",
+      textAlign:"center",
+      backgroundPosition: "center",
+      position: "fixed",
+      top: 0,  // Ensure it starts from the top
+      left: 0,
+   
+};
+    const [count, setCount] = useState(0)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div style={myStyle}>
+      <div style={{marginTop:"10px"}}>
+      <Header count={count} />
+     <CouterApp  setCount={setCount}/>
+     </div>
     </div>
-  );
+    </>
+  )
 }
 
-export default App;
+
