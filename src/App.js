@@ -13,7 +13,7 @@ export default function Counterapp() {
       textAlign:"center",
       backgroundPosition: "center",
       position: "fixed",
-      top: 0,  // Ensure it starts from the top
+      top: 0,  
       left: 0,
    
 };
