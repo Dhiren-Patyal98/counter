@@ -3,7 +3,9 @@ import './App.css'
 import Header from './Header'
 import CouterApp from './CouterApp'
 import image from '../src/Images/vintage-textured-paper-background-vector.jpg'
+
 export default function Counterapp() {
+  
   const myStyle = {
     
       backgroundImage:`url(${image})`,
@@ -22,8 +24,10 @@ export default function Counterapp() {
     <>
     <div style={myStyle}>
       <div style={{marginTop:"10px"}}>
+      
       <Header count={count} />
      <CouterApp  setCount={setCount}/>
+  
      </div>
     </div>
     </>
